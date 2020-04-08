@@ -18,6 +18,46 @@ namespace ChatExample.MainPageViewModel
         {
             ListMessages = new ObservableRangeCollection<Message>();
 
+            var messages1 = new Message
+            {
+                Text = "Hy",
+                IsTextIn = false,
+                MessageDateTime = DateTime.Now
+            };
+
+            var messages2 = new Message
+            {
+                Text = "Hy",
+                IsTextIn = true,
+                MessageDateTime = DateTime.Now
+            };
+
+            var messages3 = new Message
+            {
+                Text = "Test",
+                IsTextIn = true,
+                MessageDateTime = DateTime.Now
+            };
+
+            var messages4 = new Message
+            {
+                Text = "Test",
+                IsTextIn = false,
+                MessageDateTime = DateTime.Now
+            };
+
+            var messages5 = new Message
+            {
+                Text = "Tes1",
+                IsTextIn = false,
+                MessageDateTime = DateTime.Now
+            };
+
+            ListMessages.Add(messages1);
+            ListMessages.Add(messages2);
+            ListMessages.Add(messages3);
+            ListMessages.Add(messages4);
+            ListMessages.Add(messages5);
             SendCommand = new Command(() =>
             {
                 if (!String.IsNullOrWhiteSpace(OutText))
